@@ -143,7 +143,7 @@ class menu(cmd.Cmd):
 					display_Members_Of.append(' ')
 					display_Members_Of.append(' ')
 					for c1, c2, c3 in zip(display_Members_Of[::3], display_Members_Of[1::3], display_Members_Of[2::3]):
-						print '{:<30}{:<30}{:<}'.format(c1, c2, c3)
+						print u'{:<30}{:<30}{:<}'.format(c1, c2, c3)
 					result(tb)
 				elif type in ["group"]:
 					tb = dp.read_sql('select * from GroupTB where Name = \'' + value + '\' COLLATE NOCASE', conn)
@@ -157,14 +157,14 @@ class menu(cmd.Cmd):
 					display_Membership.append(' ')
 					display_Membership.append(' ')
 					for c1, c2, c3 in zip(display_Membership[::3], display_Membership[1::3], display_Membership[2::3]):
-						print'{:<30}{:<30}{:<}'.format(c1, c2, c3)
+						print u'{:<30}{:<30}{:<}'.format(c1, c2, c3)
 					print '----------------------------------------------------------------------------------'
 					print 'Members:'
 					display_Members = tb['Members'].to_string(index=False, header=False).split('\\n')
 					display_Members.append(' ')
 					display_Members.append(' ')
 					for c1, c2, c3 in zip(display_Members[::3], display_Members[1::3], display_Members[2::3]):
-						print '{:<30}{:<30}{:<}'.format(c1, c2, c3)
+						print u'{:<30}{:<30}{:<}'.format(c1, c2, c3)
 					result(tb)
 				elif type in ["computer"]:
 					tb = dp.read_sql('select * from ComputerTB where Name = \'' + value + '\' COLLATE NOCASE', conn)
@@ -181,7 +181,7 @@ class menu(cmd.Cmd):
 					display_Members_Of.append(' ')
 					display_Members_Of.append(' ')
 					for c1, c2, c3 in zip(display_Members_Of[::3], display_Members_Of[1::3], display_Members_Of[2::3]):
-						print '{:<30}{:<30}{:<}'.format(c1, c2, c3)
+						print u'{:<30}{:<30}{:<}'.format(c1, c2, c3)
 					result(tb)
 				else:
 					print colors.RD + "[-] " + colors.NRM + "Error: Invalid net request, please try again."
