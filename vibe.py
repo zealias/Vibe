@@ -200,7 +200,7 @@ class menu(cmd.Cmd):
 					if "-f" in option or "--file" in option:
 						option = option.split(" ")
 						filepath = option[2]
-						tb.to_csv(filepath, sep='\t', index=False)
+						tb.to_csv(filepath, sep='\t', index=False, encoding='utf-8')
 						print colors.GRN + "[+] " + colors.NRM + "Exported List of Users to: "+ filepath
 					return cmd.Cmd.cmdloop(self, intro)
 				if "groups" in option:
@@ -211,7 +211,7 @@ class menu(cmd.Cmd):
 					if "-f" in option or "--file" in option:
 						option = option.split(" ")
 						filepath = option[2]
-						tb.to_csv(filepath, sep='\t', index=False)
+						tb.to_csv(filepath, sep='\t', index=False, encoding='utf-8')
 						print colors.GRN + "[+] " + colors.NRM + "Exported List of Groups to: " + filepath
 					return cmd.Cmd.cmdloop(self, intro)
 				if "computers" in option:
@@ -222,7 +222,7 @@ class menu(cmd.Cmd):
 					if "-f" in option or "--file" in option:
 						option = option.split(" ")
 						filepath = option[2]
-						tb.to_csv(filepath, sep='\t', index=False)
+						tb.to_csv(filepath, sep='\t', index=False, encoding='utf-8')
 						print colors.GRN + "[+] " + colors.NRM + "Exported List of Computers to: " + filepath
 					return cmd.Cmd.cmdloop(self, intro)
 			except pandas.io.sql.DatabaseError:
