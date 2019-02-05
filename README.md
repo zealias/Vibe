@@ -1,4 +1,12 @@
 # Vibe
+
+This is a Fork of Tylous/Vibe with some quick fixes.
+
+Vibe Issues:
+1) If seconds is 0, Vibe breaks
+2) If there is unicode encoding in database, Vibe breaks
+3) exporting to file breaks due to python 2.7 pandas defaults to ascii
+
 Vibe is a tool designed to preform post-ex lateral movement techniques while remaining undetected by network detection tools including Threat Hunting appliances. 
 Vibe works by pulling down all information about a domain, allowing users to perform the same domain net commands offline. Vibe also enumerates additional information that is not typically shown in these queries. 
 Vibe also provides the ability to scan systems to see what shares are available and what privileges the account used, has access to. Vibe also provides the ability to enumerate user’s currently logged into systems, as well as, who has been logged in, while remaining undetected. 
